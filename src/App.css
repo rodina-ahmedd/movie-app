@@ -1,0 +1,63 @@
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  font-family: system-ui, sans-serif;
+}
+
+.search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+}
+
+.search-form button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.movie-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.movie-card-no-poster {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  border-radius: 4px;
+  color: #888;
+}
+
+.movie-card h3 {
+  font-size: 0.95rem;
+  margin: 8px 0 4px;
+}
+
+.movie-card p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
