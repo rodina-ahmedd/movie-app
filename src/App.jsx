@@ -11,21 +11,29 @@ function App() {
     e.preventDefault();
     search(term);
   }
+  function handleClear() {
+    setTerm('');
+  }
 
   return (
     <div className="app">
       <h1>Movie Search</h1>
 
       <form onSubmit={handleSubmit} className="search-form">
-        <input
-          type="text"
-          value={term}
-          onChange={(e) => setTerm(e.target.value)}
-          placeholder="Search for a movie..."
-          aria-label="Movie title"
-        />
-        <button type="submit">Search</button>
-      </form>
+  <input
+    type="text"
+    value={term}
+    onChange={(e) => setTerm(e.target.value)}
+    placeholder="Search for a movie..."
+    aria-label="Movie title"
+  />
+  <button type="submit">Search</button>
+  {term && (
+    <button type="button" onClick={handleClear}>
+      Clear
+    </button>
+  )}
+</form>
 
       {loading && <p role="status">Loading...</p>}
 
