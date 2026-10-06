@@ -30,8 +30,10 @@ function App() {
   }
 
   return (
-    <div className="app">
+  <main className="app">
+    <header>
       <h1>Movie Search</h1>
+    </header>
 
       <section className="ai-section">
         <h2>Describe what you want to watch</h2>
@@ -90,7 +92,7 @@ function App() {
           ))}
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 
