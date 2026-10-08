@@ -62,9 +62,23 @@ error.
 
 ## Testing
 
-Unit tests (Vitest + Testing Library) for the recommendation hook cover:
-a successful flow, invalid JSON from the AI, retry then success after
-a 503, and a friendly error after repeated 503s. Result: 4 of 4 passing.
+Vitest + Testing Library, 8 tests across 3 files, all passing.
+Run `npx vitest run --coverage` to reproduce the numbers.
+
+| File | Statements |
+|------|-----------|
+| `MovieCard.jsx` | 100% |
+| `useMovieRecommendation.js` | 87.5% |
+| `useMovieSearch.js` | 85.7% |
+| `App.jsx` | 64.3% |
+| **All files** | **83.5%** |
+
+What is covered:
+- AI hook: successful flow, invalid JSON from the AI, retry then success
+  after a 503, friendly error after repeated 503s
+- `MovieCard`: title/year/poster with alt text, fallback when poster is N/A
+- `App` (critical user flow): search by title shows results, and a
+  readable error appears when OMDb finds nothing
 
 ## Performance and accessibility audit
 
@@ -83,13 +97,14 @@ a 503, and a friendly error after repeated 503s. Result: 4 of 4 passing.
   the model I used), so heavy use hits a quota error.
 - Model names change. A model I started with (`gemini-2.0-flash`) was
   retired and returned 404, so the model name lives in one constant.
-- Test coverage focuses on the AI hook. Components are not yet covered.
+- The AI form in `App.jsx` is not covered by a test (that is most of the
+  uncovered 36% of that file), and there is no end-to-end browser test.
 
 ## Future improvements
 
 - Move API calls behind a small serverless function
 - Watchlist saved in localStorage
-- Component tests and an end-to-end test for the search flow
+- A test for the AI form flow and an end-to-end browser test
 
 ## Deployment checklist
 
