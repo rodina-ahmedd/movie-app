@@ -138,11 +138,11 @@ in Vercel, go to Deployments, pick the last good one, and choose
 
 **WAVE: 0 errors, 0 alerts**
 
-![WAVE results](docs/wave.png)
+![WAVE results](docs/WAVE.png)
 
 **Test coverage: 8 tests passing, 83.5% overall**
 
-![Coverage report](docs/coverage.png)
+![Coverage report](docs/Coverage.png)
 
 ## Reflection
 
