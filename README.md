@@ -129,3 +129,21 @@ app never shows a blank screen or a raw error.
 Vercel keeps every previous deployment. To roll back, open the project
 in Vercel, go to Deployments, pick the last good one, and choose
 "Instant Rollback". Pushing to `main` redeploys automatically.
+
+## Evidence
+
+**Lighthouse (mobile): Performance 98, Accessibility 98**
+
+![Lighthouse results](docs/lighthouse.png)
+
+**WAVE: 0 errors, 0 alerts**
+
+![WAVE results](docs/wave.png)
+
+**Test coverage: 8 tests passing, 83.5% overall**
+
+![Coverage report](docs/coverage.png)
+
+## Reflection
+
+See [REFLECTION.md](REFLECTION.md).
